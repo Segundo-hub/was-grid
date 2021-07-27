@@ -1,0 +1,56 @@
+@mixin from($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+// @mixn for compile grid;
+
+@mixin compile-grid($breakpoints, $prefix, $column) {
+	.f-grid {
+		display: grid;
+		grid-template-columns: 100%;
+		width: 100%;
+		column-gap: var(--grid-gap);
+		&.row-gap {
+			row-gap: var(--grid-gap);
+		}
+	}
+	$local-prefix: '.es';
+	@if ($prefix) {
+		$local-prefix: $prefix;
+	}
+	@each $value, $size in $breakpoints {
+		@include from($size) {
+			@for $i from 1 through $column {
+				.f-grid > .span\:#{$value}-#{$i} {
+					grid-column-end: span $i;
+				}
+				.#{$local-prefix}-grid\:#{$value}-#{$i} {
+					grid-template-columns: repeat(
+						#{$i},
+						calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i})
+					);
+				}
+			}
+		}
+	}
+}
+
+@mixin run($name, $property, $value) {
+	@media screen and(min-width: 1100px) {
+		@for $i from 1 through 12 {
+			.grid-#{$i} {
+				grid-template-columns: repeat(#{$i}, calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i}));
+			}
+		}
+	}
+
+	@each $size, $value in $breakpoints {
+		.name\:#{$size} {
+			width: $value;
+		}
+	}
+}
+
+@include compile-grid($breakpoints, 'es', 10);

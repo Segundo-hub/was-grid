@@ -1,0 +1,26 @@
+:root{
+
+   --max-width: 1400px;
+   --grid-gap: 1rem;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+:root{
+   .bg{
+      &-primary{
+         background-color: rgb(11, 126, 110);
+      }
+      &-dark{
+         background-color:#1c2529;
+      }
+   }
+
+}

@@ -1,0 +1,15 @@
+@import './base/reset';
+
+@import './settings/index.scss';
+
+@import './layout/index.scss';
+
+// TESTING FINES
+
+$colors: 'grey', 'teal', 'orange', 'brown', 'darkgray';
+
+@each $i in $colors {
+	.bg-#{$i} {
+		background-color: unquote($i);
+	}
+}
