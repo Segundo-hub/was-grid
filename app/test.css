@@ -1,0 +1,64 @@
+html {
+	font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+}
+img {
+	max-width: 100%;
+}
+li {
+	list-style: none;
+}
+.nav-section,
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main-nav {
+	height: 64px;
+	background-color: rgb(39, 44, 44);
+}
+.nav-section {
+	height: 100%;
+	align-items: center;
+}
+.nav-section h3 {
+	color: rgb(199, 85, 43);
+	font-size: 2rem;
+	font-weight: 300;
+}
+.navigation {
+	width: 60%;
+}
+.navigation li {
+	flex: auto;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 14px;
+	border-radius: 3px;
+	outline: none;
+	border: none;
+}
+.nav--item {
+	color: #bec29d;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+.teal {
+	background-color: teal;
+}
+
+.random-1 {
+	background-color: rgb(67, 27, 177);
+}
+
+.random-2 {
+	background-color: rgb(158, 103, 32);
+}
+.random-3 {
+	background-color: rgb(19, 107, 52);
+}
