@@ -1,0 +1,18 @@
+# ignore files 
+webpack.*.js
+.editorconfig
+prepros.config
+.babelrc
+.eslintrc.*
+index.html
+test.js
+init-dev.js
+index.html
+
+# ignore directories 
+
+/node_modules/
+app/
+/.vscode/
+/global/
+

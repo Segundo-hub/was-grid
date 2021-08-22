@@ -13,7 +13,6 @@
 		"url": "https://github.com/Segundo-hub/was-grid.git/issues"
 	},
 	"scripts": {
-		"test": "",
 		"start": "gulp"
 	},
 	"keywords": [],
@@ -31,10 +30,14 @@
 		"gulp-sass": "^4.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"postcss": "^8.2.8",
+		"postcss-custom-properties": "^11.0.0",
 		"pug": "^3.0.2",
 		"sass": "^1.32.8"
 	},
 	"browerlist": [
-		"last 3 version, >1%"
+		"> 1%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
 	]
 }

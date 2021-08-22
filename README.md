@@ -1,3 +1,5 @@
 # Wasgrid
 
-### CSS library for layout development still in progress
+### SASS library for layout development still in progress
+
+

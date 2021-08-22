@@ -1,0 +1,51 @@
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @media ----------------
+// ===========================================================================
+
+@mixin from($width) {
+	@if isCoreMedia($width) {
+		@media screen and(min-width: map-get($breakpoints, $width )) {
+			@content;
+		}
+	} @else if isOtherMedia($width) {
+		@media screen and(min-width: $width) {
+			@content;
+		}
+	} @else {
+		@error "@mixin 'from' a need valid css unit value. Invalid value '#{$width}'";
+	}
+}
+
+@mixin to($width) {
+	@if isCoreMedia($width) {
+		@media screen and(max-width: map-get($breakpoints, $width )) {
+			@content;
+		}
+	} @else if isOtherMedia($width) {
+		@media screen and(max-width: $width) {
+			@content;
+		}
+	} @else {
+		@error "@mixin 'to' a need valid css unit value. Invalid value '#{$width}'";
+	}
+}
+
+@mixin from-to($from, $to) {
+	@if isCoreMedia($from) and isCoreMedia($to) {
+		$f: map-get($breakpoints, $from);
+		$t: map-get($breakpoints, $to);
+		$min: math.min($f, $t);
+		$max: math.max($f, $t);
+		@media screen and(min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else if isOtherMedia($from) and isOtherMedia($to) {
+		$min: math.min($from, $to);
+		$max: math.max($from, $to);
+		@media screen and(min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@error "@mixin 'from-to' a need valid css unit value. Invalid '#{$width}'";
+	}
+}

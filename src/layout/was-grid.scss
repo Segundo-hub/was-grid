@@ -1,8 +1,12 @@
-@import './base/reset';
+@import './settings/index';
 
-@import './settings/index.scss';
+@import './functions/index';
 
-@import './layout/index.scss';
+@import './base/index';
+
+@import './layout/index';
+
+@import './utils/icons';
 
 // TESTING FINES
 

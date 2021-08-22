@@ -1,0 +1,26 @@
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @blocks ---------------
+// ===========================================================================
+
+.l-section {
+	width: 100%;
+	max-width: var(--max-width);
+	padding-left: var(--section-padding, 1rem);
+	padding-right: var(--section-padding, 1rem);
+	margin-left: auto;
+	margin-right: auto;
+}
+.l-section.legacy {
+	@include from($md) {
+		--section-padding: 2rem;
+	}
+	@include from($xxl) {
+		--section-padding: 0;
+	}
+}
+
+@media screen and(min-width: 1450px) {
+	html {
+		--section-padding: 0;
+	}
+}

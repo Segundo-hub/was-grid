@@ -1,1 +1,13 @@
-last 2 version
+[development]
+> 1% 
+last 2 versions
+Firefox ESR 
+Opera 12.1
+[production]
+> 1% 
+last 2 versions
+Firefox ESR 
+Opera 12.1
+not dead
+not ie <= 11
+not op_mini all
