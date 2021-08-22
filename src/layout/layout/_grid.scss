@@ -1,0 +1,82 @@
+// ===========================================================================
+// 	---------- @author Alex Segundo (C) 2021 - @block @grid-core -------------
+// ===========================================================================
+
+// @mixin generate columns
+// @parameter {$i: number of columns}
+@mixin grid-columns-width($i) {
+	$sn: #{$i - 1};
+	$columns-width: calc(#{100 / $i}% - var(--grid-gap) * #{$sn}/#{$i});
+	@if ($i == 1) {
+		grid-template-columns: 100%;
+	}
+	@if ($i > 1) {
+		grid-template-columns: repeat($i, $columns-width);
+	}
+}
+
+// @mixin generate span-end
+// @parameter {$i: to end}
+@mixin grid-columns-span($i) {
+	@if ($i > 0) {
+		grid-column-end: span $i;
+	}
+}
+
+// @mixin generate grid with necessary properties
+@mixin grid-prototype {
+	.#{$grid-name} {
+		display: grid;
+		grid-template-columns: 100%;
+		column-gap: var(--grid-gap);
+		width: 100%;
+	}
+}
+
+// @mixin compile grid
+// @parameters
+//	- $sizes: core-breakpoints or defined for user
+//  - $columns: number of columns
+@mixin compile-grid($sizes, $columns) {
+	// include grid-declaration
+	@include grid-prototype;
+
+	// loop for genarate columns in grid
+	@each $value, $size in $sizes {
+		@include from($size) {
+			// cols defined in $colums parameter
+			@for $col from 1 through $columns {
+				.#{$value}\:grid-#{$col} {
+					@include grid-columns-width($col);
+				}
+				.#{$grid-name} > .#{$value}\:span-#{$col} {
+					@include grid-columns-span($col);
+				}
+			}
+		}
+	}
+}
+
+.l-center {
+	display: flex;
+	align-content: center;
+	align-items: center;
+}
+.l-main-center {
+	flex-direction: column;
+	justify-content: center;
+}
+
+.l-to-right {
+	margin-right: auto;
+}
+
+.l-to-left {
+	margin-left: auto;
+}
+
+.pd {
+	padding: 1rem;
+}
+
+@include compile-grid($breakpoints, 12);

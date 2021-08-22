@@ -48,3 +48,5 @@ js/babel/.tern-port
 public
 css/
 app/*.html
+
+testing/

@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="es-PE")
 	head
 		meta(charset="UTF-8")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -10,28 +10,41 @@ html(lang="en")
 		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap", rel="stylesheet")
 		title WasGrid
-	body 
-		header.main-nav
-			nav.l-section.nav-section
-				h3 Wasgrid
-				ul.navigation
-					li 
-						a(href="#").nav--item Layout
-					li 
-						a(href="#").nav--item Responsive
-					li 
-						a(href="#").nav--item Grid System
-					li 
-						a(href="#").nav--item Grid System
-					li 
-						a(href="#").nav--item Grid System
+	body.bg-primary 
+		header.main-nav.l-center
+			.f-grid.l-section.legacy
+				nav.l-center
+					h3 Wasgrid
+					ul.navigation.l-to-left
+						li 
+							a(href="#").nav--item Layout
+						li 
+							a(href="#").nav--item Responsive
+						li 
+							a(href="#").nav--item Grid System
+						li 
+							a(href="#").nav--item Grid System
+						li 
+							a(href="#").nav--item Grid System
+					span.es-menu--burger#burger
 
-		section.l-section 
+		section.l-section.legacy
 			h2 Grid System
-			div(class="f-grid es-grid:md-12")
-				div(class="span:md-2 teal" style="min-height:400px ") 1
-				div(class="span:md-2 random-1" style="min-height:400px ") 2
-				div(class="span:md-2 teal" style="min-height:400px ") 1
-				div(class="span:md-2 random-1" style="min-height:400px ") 2
-				div(class="span:md-2 teal" style="min-height:400px ") 1
-				div(class="span:md-2 random-1" style="min-height:400px ") 2
+			div(class="grid lg:grid-9 row-gap test-section")
+				div(class="lg:span-3 bg-grey l-center l-main-center pd" style="min-height:400px ") 
+					h3 Texto de Ejemplo 
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam impedit repellat totam voluptates ipsa, aliquam voluptatem, animi laudantium corrupti neque sed beatae consequuntur dolor quod fuga iusto deleniti vel minus?Saepe harum voluptatibus quae quia quaerat mollitia suscipit provident totam commodi at, ut distinctio rem explicabo qui ratione dolorem placeat delectus alias voluptate, eius dolore consectetur reprehenderit assumenda. Nam, aperiam.
+				div(class="lg:span-6 bg-teal l-center l-main-center pd" style="min-height:400px ")
+					h3 Texto de Ejemplo 
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam impedit repellat totam voluptates ipsa, aliquam voluptatem, animi laudantium corrupti neque sed beatae consequuntur dolor quod fuga iusto deleniti vel minus?Saepe harum voluptatibus quae quia quaerat mollitia suscipit provident totam commodi at, ut distinctio rem explicabo qui ratione dolorem placeat delectus alias voluptate, eius dolore consectetur reprehenderit assumenda. Nam, aperiam.
+			div(class="grid lg:grid-6 row-gap test-section")
+				div(class="lg:span-3 bg-teal" style="min-height:400px ") 1
+				div(class="lg:span-3 bg-orange" style="min-height:400px ") 2
+
+
+
+		script.
+			document.getElementById('burger').addEventListener("click", () => {
+				document.querySelector('.navigation').classList.toggle('active')
+			})
+			console.log(document)
