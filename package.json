@@ -33,11 +33,5 @@
 		"postcss-custom-properties": "^11.0.0",
 		"pug": "^3.0.2",
 		"sass": "^1.32.8"
-	},
-	"browerlist": [
-		"> 1%",
-		"not dead",
-		"not ie <= 11",
-		"not op_mini all"
-	]
+	}
 }
