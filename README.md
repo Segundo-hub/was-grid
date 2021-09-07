@@ -1,5 +1,6 @@
 # Wasgrid
 
+<<<<<<< HEAD
 ### Sass/CSS library for layout development
 
 ## Install and Use
@@ -62,3 +63,8 @@ import 'was-grid/theme.scss'
 ```js
 import 'was-grid/build.css'
 ```
+=======
+### SASS library for layout development still in progress
+
+
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191

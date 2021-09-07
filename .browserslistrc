@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 [development]
 	> 1% 
@@ -13,3 +14,18 @@
 	not dead
 	not ie <= 11
 	not op_mini all
+=======
+[development]
+> 1% 
+last 2 versions
+Firefox ESR 
+Opera 12.1
+[production]
+> 1% 
+last 2 versions
+Firefox ESR 
+Opera 12.1
+not dead
+not ie <= 11
+not op_mini all
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191

@@ -10,6 +10,7 @@ html(lang="es-PE")
 		link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300&display=swap", rel="stylesheet")
 		title WasGrid
+<<<<<<< HEAD
 		script(src="js/jquery.js") 
 	body.bg-primary 
 		header.main-nav.cross-center
@@ -17,6 +18,14 @@ html(lang="es-PE")
 				nav.cross-center
 					h3 Wasgrid
 					ul.menu.to-left
+=======
+	body.bg-primary 
+		header.main-nav.l-center
+			.f-grid.l-section.legacy
+				nav.l-center
+					h3 Wasgrid
+					ul.navigation.l-to-left
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191
 						li 
 							a(href="#").nav--item Layout
 						li 
@@ -27,6 +36,7 @@ html(lang="es-PE")
 							a(href="#").nav--item Grid System
 						li 
 							a(href="#").nav--item Grid System
+<<<<<<< HEAD
 					span#burger.cross-center.to-left
 						span.es-menu--burger
 
@@ -36,3 +46,27 @@ html(lang="es-PE")
 
 
 		script(src="js/main.js") 
+=======
+					span.es-menu--burger#burger
+
+		section.l-section.legacy
+			h2 Grid System
+			div(class="grid lg:grid-9 row-gap test-section")
+				div(class="lg:span-3 bg-grey l-center l-main-center pd" style="min-height:400px ") 
+					h3 Texto de Ejemplo 
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam impedit repellat totam voluptates ipsa, aliquam voluptatem, animi laudantium corrupti neque sed beatae consequuntur dolor quod fuga iusto deleniti vel minus?Saepe harum voluptatibus quae quia quaerat mollitia suscipit provident totam commodi at, ut distinctio rem explicabo qui ratione dolorem placeat delectus alias voluptate, eius dolore consectetur reprehenderit assumenda. Nam, aperiam.
+				div(class="lg:span-6 bg-teal l-center l-main-center pd" style="min-height:400px ")
+					h3 Texto de Ejemplo 
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam impedit repellat totam voluptates ipsa, aliquam voluptatem, animi laudantium corrupti neque sed beatae consequuntur dolor quod fuga iusto deleniti vel minus?Saepe harum voluptatibus quae quia quaerat mollitia suscipit provident totam commodi at, ut distinctio rem explicabo qui ratione dolorem placeat delectus alias voluptate, eius dolore consectetur reprehenderit assumenda. Nam, aperiam.
+			div(class="grid lg:grid-6 row-gap test-section")
+				div(class="lg:span-3 bg-teal" style="min-height:400px ") 1
+				div(class="lg:span-3 bg-orange" style="min-height:400px ") 2
+
+
+
+		script.
+			document.getElementById('burger').addEventListener("click", () => {
+				document.querySelector('.navigation').classList.toggle('active')
+			})
+			console.log(document)
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191

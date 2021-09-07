@@ -63,6 +63,10 @@ li {
 }
 
 .test-section {
+<<<<<<< HEAD
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+=======
+	margin-bottom: 2rem;
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191
 }

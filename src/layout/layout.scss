@@ -1,0 +1,19 @@
+@import './settings/index';
+
+@import './functions/index';
+
+@import './base/index';
+
+@import './layout/index';
+
+@import './utils/icons';
+
+// TESTING FINES
+
+$colors: 'grey', 'teal', 'orange', 'brown', 'darkgray';
+
+@each $i in $colors {
+	.bg-#{$i} {
+		background-color: unquote($i);
+	}
+}

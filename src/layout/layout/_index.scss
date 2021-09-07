@@ -2,6 +2,7 @@
 // 	---------------------- @author Alex Segundo (C) 2021 --------------------
 // ===========================================================================
 
+<<<<<<< HEAD
 @import '_box-section';
 
 @import '_grid-core';
@@ -9,3 +10,12 @@
 @import '_media-html';
 
 @import '_alignments';
+=======
+@import './media-querie';
+
+@import './section';
+
+@import './grid';
+
+@import './flex-grid';
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191

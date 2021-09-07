@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #burger {
 	display: none;
 }
@@ -65,3 +66,27 @@
 .pd {
 	padding: 1rem;
 }
+=======
+.es-menu--burger {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	width: 1.5rem;
+	background-color: silver;
+	height: 2px;
+	&::after,
+	&::before {
+		content: '';
+		background-color: silver;
+		position: absolute;
+		width: 1.5rem;
+		height: 2px;
+	}
+	&::after {
+		top: -6px;
+	}
+	&::before {
+		top: 6px;
+	}
+}
+>>>>>>> 153b276b770728c5a99c169cf0f4fa4dd0162191
