@@ -2,10 +2,10 @@
 // 	---------------------- @author Alex Segundo (C) 2021 --------------------
 // ===========================================================================
 
-@import './media-querie';
+@import '_box-section';
 
-@import './section';
+@import '_grid-core';
 
-@import './grid';
+@import '_media-html';
 
-@import './flex-grid';
+@import '_alignments';

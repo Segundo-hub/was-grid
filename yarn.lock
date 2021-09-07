@@ -5173,6 +5173,11 @@ void-elements@^3.1.0:
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
 
+was-grid@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/was-grid/-/was-grid-0.1.0.tgz#73f384f851d83ec4389939362b2e898ee6db9a03"
+  integrity sha512-XAFncN2byxXQ7eWPVnVB1rN4XGieCeoFM7oaUBqHWN7uGZg4cHceEa+saOvUmreJwubZ6jrC2IiQlptgSnt/vA==
+
 whet.extend@~0.9.9:
   version "0.9.9"
   resolved "https://registry.yarnpkg.com/whet.extend/-/whet.extend-0.9.9.tgz#f877d5bf648c97e5aa542fadc16d6a259b9c11a1"

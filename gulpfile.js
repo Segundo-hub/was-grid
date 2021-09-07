@@ -1,5 +1,5 @@
 const rename = require('gulp-rename')
-const prefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer')
 const postCss = require('gulp-postcss')
 const GulpPug = require('gulp-pug-3')
 
@@ -10,6 +10,8 @@ const sass = require('gulp-sass')
 
 sass.compiler = require('sass')
 
+const postcssPlugins = [autoprefixer({})]
+
 // =================================================================================
 // ---------------------------  COMPILE BUILD SASS FILES ---------------------------
 // =================================================================================
@@ -18,7 +20,7 @@ gulp.task('sass:compile', () =>
 	gulp
 		.src('src/layout/*.scss')
 		.pipe(sass())
-		.pipe(postCss([prefixer()]))
+		.pipe(postCss(postcssPlugins))
 		.pipe(rename('bundle.lib.css'))
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.stream())

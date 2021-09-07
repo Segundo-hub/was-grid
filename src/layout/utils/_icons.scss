@@ -1,22 +1,67 @@
-.es-menu--burger {
-	cursor: pointer;
-	display: inline-block;
-	position: relative;
-	width: 1.5rem;
-	background-color: silver;
-	height: 2px;
-	&::after,
-	&::before {
-		content: '';
-		background-color: silver;
-		position: absolute;
+#burger {
+	display: none;
+}
+@include to(lg) {
+	.es-menu--burger {
+		display: inline-block;
+		position: relative;
 		width: 1.5rem;
+		background-color: silver;
 		height: 2px;
+		&::after,
+		&::before {
+			content: '';
+			background-color: silver;
+			position: absolute;
+			width: 1.5rem;
+			height: 2px;
+		}
+		&::after {
+			top: -6px;
+		}
+		&::before {
+			top: 6px;
+		}
 	}
-	&::after {
-		top: -6px;
+	#burger {
+		display: flex;
+		width: 32px;
+		height: 24px;
+		cursor: pointer;
 	}
-	&::before {
-		top: 6px;
+}
+.menu {
+	width: 80%;
+	max-width: 500px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	padding: 2rem 1rem;
+	background-color: var(--bg-dark-light);
+	position: absolute;
+	right: 0;
+	top: 100%;
+	.nav--item {
+		width: 100%;
+		display: inline-block;
+		padding: 1rem 0;
+		&:hover {
+			color: teal;
+		}
 	}
+
+	@include from(lg) {
+		max-width: 60%;
+		flex-direction: row;
+		position: static;
+		background-color: transparent;
+		.nav--item {
+			width: auto;
+			padding: 0;
+		}
+	}
+}
+.pd {
+	padding: 1rem;
 }

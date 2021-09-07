@@ -1,7 +1,10 @@
 // ===========================================================================
-// 	-------- @author Alex Segundo (C) 2021 - %import index modules ----------
+// 	-------- @author Alex Segundo (C) 2021 - @block base-styles -------------
 // ===========================================================================
 
-@import '_reset';
-
-@import '_base';
+html {
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
+}

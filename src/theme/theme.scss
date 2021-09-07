@@ -1,0 +1,61 @@
+// ===========================================================================
+//	------------- @author Alex Segundo (C) 2021 - THEME CONFIG  ---------------
+// ===========================================================================
+@use 'sass:color';
+@use 'sass:math';
+$dark: #1f1f1f;
+$primary: #00a5ce;
+$brand: #008080;
+$theme: (
+	brand: $brand,
+	dark: $dark,
+	primary: $primary,
+	second: color.complement($primary),
+	third: color.adjust($primary, $hue: 180deg),
+);
+
+@mixin gen-shade($color, $name, $amount: 9%) {
+	@for $i from 1 through 9 {
+		// gen root color
+		$root: color.scale($color, $lightness: 100%);
+		$scale: darken($root, $i * $amount);
+
+		--#{$name}-#{$i}00: #{$scale};
+	}
+}
+
+:root {
+	$brand: map-get($theme, dark);
+	@include gen-shade($brand, 'dark', 10%);
+}
+
+:root {
+	$brand: map-get($theme, brand);
+	@include gen-shade($brand, 'brand');
+}
+
+:root {
+	$red: map-get($theme, second);
+	@include gen-shade($red, 'red', 5%);
+}
+
+:root {
+	$prim: map-get($theme, primary);
+	@include gen-shade($prim, 'blue');
+}
+
+:root {
+	$prim: map-get($theme, third);
+	@include gen-shade($prim, 'third');
+}
+
+/// testing
+$base-dark: #181818;
+$dark-light: color.scale($base-dark, $lightness: 4%);
+$border-bg: color.scale($base-dark, $lightness: 7.5%);
+
+:root {
+	--bg-primary: #{$base-dark};
+	--bg-dark-light: #{$dark-light};
+	--border-color: #{$border-bg};
+}

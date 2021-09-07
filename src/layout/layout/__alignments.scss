@@ -1,0 +1,63 @@
+$flex-alignments: (
+	row: (
+		flex-direction: row,
+	),
+	row-reverse: (
+		flex-direction: row-reverse,
+	),
+	column: (
+		flex-direction: column,
+	),
+	column-reverse: (
+		flex-direction: column-reverse,
+	),
+	main-start: (
+		justify-content: flex-start,
+	),
+	main-center: (
+		justify-content: center,
+	),
+	main-end: (
+		justify-content: flex-end,
+	),
+	main-justify: (
+		justify-content: space-between,
+	),
+	main-distribute: (
+		justify-content: space-evenly,
+	),
+	cross-baseline: (
+		align-items: baseline,
+		align-content: baseline,
+	),
+	cross-start: (
+		align-items: flex-start,
+		align-content: flex-start,
+	),
+	cross-center: (
+		align-items: center,
+		align-content: center,
+	),
+	cross-end: (
+		align-items: flex-end,
+		align-content: flex-end,
+	),
+);
+
+$list: map-keys($flex-alignments);
+
+@mixin flex-align() {
+	@each $value, $size in $breakpoints {
+		@if ($size > $sm) {
+			@include from($size) {
+				@each $selector, $property in $flex-alignments {
+					.#{$value}\:#{$selector} {
+						@each $prop, $value in $property {
+							#{$prop}: $value;
+						}
+					}
+				}
+			}
+		}
+	}
+}

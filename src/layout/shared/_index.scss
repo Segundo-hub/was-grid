@@ -1,7 +1,9 @@
 // ===========================================================================
-// 	-------- @author Alex Segundo (C) 2021 - %import index modules ----------
+// 	-------- @author Alex Segundo (C) 2021 - @block shared-modules -----------
 // ===========================================================================
 
-@import '_reset';
+@import '_variables';
 
-@import '_base';
+@import '_mixin';
+
+@import '_media-query';

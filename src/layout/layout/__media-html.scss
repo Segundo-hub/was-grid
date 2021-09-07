@@ -1,0 +1,43 @@
+%media-container {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+}
+
+$aspect-ratio: (
+	'1': 100%,
+	'4-3': 75%,
+	'3-2': 66.67%,
+	'16-9': 56.25%,
+	'rect': 50%,
+);
+
+.#{$video-container},
+.#{$img-container} {
+	@extend %media-container;
+}
+.#{$video-container} {
+	.video-inner,
+	.video,
+	video,
+	iframe {
+		@include full-wide(absolute);
+	}
+}
+.#{$img-container} {
+	.img,
+	.img-inner,
+	img {
+		@include full-wide(absolute);
+	}
+}
+
+@each $aspect, $value in $aspect-ratio {
+	.#{$video-container}.ratio-#{$aspect},
+	.#{$img-container}.ratio-#{$aspect} {
+		padding-bottom: $value;
+	}
+}
+picture.#{$img-container} {
+	display: block;
+}

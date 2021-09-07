@@ -1,0 +1,84 @@
+@mixin spacing-proto($prefix, $space) {
+	$final-space: #{$i * $spacer}rem;
+	.#{$prefix}s-#{$space} {
+		margin-left: $final-space;
+	}
+	.#{$prefix}e-#{$space} {
+		margin-right: $final-space;
+	}
+	.#{$prefix}x-#{$space} {
+		margin-right: $final-space;
+		margin-left: $final-space;
+	}
+	.#{$prefix}t-#{$space} {
+		margin-top: $final-space;
+	}
+	.#{$prefix}b-#{$space} {
+		margin-bottom: $final-space;
+	}
+	.#{$prefix}y-#{$space} {
+		margin-top: $final-space;
+		margin-bottom: $final-space;
+	}
+}
+
+$space-alignments: (
+	
+);
+
+$flex-alignments: (
+	row: (
+		flex-direction: row,
+	),
+	row-reverse: (
+		flex-direction: row-reverse,
+	),
+	column: (
+		flex-direction: column,
+	),
+	column-reverse: (
+		flex-direction: column-reverse,
+	),
+	main-start: (
+		justify-content: flex-start,
+	),
+	main-center: (
+		justify-content: center,
+	),
+	main-end: (
+		justify-content: flex-end,
+	),
+	main-justify: (
+		justify-content: space-between,
+	),
+	main-distribute: (
+		justify-content: space-evenly,
+	),
+	cross-baseline: (
+		align-items: baseline,
+		align-content: baseline,
+	),
+	cross-start: (
+		align-items: flex-start,
+		align-content: flex-start,
+	),
+	cross-center: (
+		align-items: center,
+		align-content: center,
+	),
+	cross-end: (
+		align-items: flex-end,
+		align-content: flex-end,
+	),
+);
+
+@each $selector, $property in $flex-alignments {
+	.#{$size}-#{$selector} {
+		@each $prop, $value in $property {
+			#{$prop}: $value;
+		}
+	} 
+}
+
+@for $i from 1 through 6 {
+}

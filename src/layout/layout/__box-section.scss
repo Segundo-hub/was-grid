@@ -10,17 +10,12 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
 .l-section.legacy {
 	@include from($md) {
 		--section-padding: 2rem;
 	}
-	@include from($xxl) {
-		--section-padding: 0;
-	}
-}
-
-@media screen and(min-width: 1450px) {
-	html {
-		--section-padding: 0;
+	@include from(1740px) {
+		--max-width: 1700px;
 	}
 }

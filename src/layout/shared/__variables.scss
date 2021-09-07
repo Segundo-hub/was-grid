@@ -1,0 +1,28 @@
+// ===========================================================================
+// 	-------- @author Alex Segundo (C) 2021 - @block global-variables ---------
+// ===========================================================================
+
+$sm: 36em !default; // 570px
+$md: 48em !default; // 768px
+$lg: 62em !default; // 992px
+$xl: 75em !default; // 1200px
+$xxl: 93em !default; // 1488px
+$ultra: 112em !default; // 1792px
+
+$breakpoints: (
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+	xxl: $xxl,
+) !default;
+
+$max-width: 1140px;
+$max-width-lg: 1400px;
+$max-width-xl: 1700px;
+
+$spacer: 0.5;
+
+$grid-name: 'grid';
+$video-container: 'es-video';
+$img-container: 'es-image';

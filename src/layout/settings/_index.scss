@@ -2,26 +2,11 @@
 // 	---------- @author Alex Segundo (C) 2021 - @block $variables -------------
 // ===========================================================================
 
-$max-width: 1400px;
-
-$sm: 36em !default; // 570px
-$md: 48em !default; // 768px
-$lg: 62em !default; // 992px
-$xl: 75em !default; // 1200px
-$xxl: 88em !default; // 1392px
-
-$breakpoints: (
-	sm: $sm,
-	md: $md,
-	lg: $lg,
-	xl: $xl,
-	xxl: $xxl,
-) !default;
-
-$grid-name: 'grid';
-
 :root {
-	--grid-gap: 2rem;
-	--max-width: 1440px;
-	--bg-primary: #d8d8d8;
+	--grid-gap: 1rem;
+	--max-width: #{$max-width};
+
+	@include from($xxl) {
+		--max-width: #{$max-width-lg};
+	}
 }

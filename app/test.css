@@ -1,9 +1,5 @@
 html {
 	font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 16px;
-}
-img {
-	max-width: 100%;
 }
 li {
 	list-style: none;
@@ -16,7 +12,10 @@ li {
 }
 .main-nav {
 	height: 64px;
-	background-color: rgb(39, 44, 44);
+	background-color: var(--bg-dark-light);
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 .nav-section {
 	height: 100%;
@@ -64,5 +63,6 @@ li {
 }
 
 .test-section {
-	margin-bottom: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }

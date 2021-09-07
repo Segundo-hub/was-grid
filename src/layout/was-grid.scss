@@ -1,6 +1,8 @@
-@import './settings/index';
+@import './shared/index';
 
 @import './functions/index';
+
+@import './settings/index';
 
 @import './base/index';
 
@@ -8,12 +10,12 @@
 
 @import './utils/icons';
 
-// TESTING FINES
+$breakpoints: (
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+);
 
-$colors: 'grey', 'teal', 'orange', 'brown', 'darkgray';
+@include compile-grid($breakpoints, 10);
 
-@each $i in $colors {
-	.bg-#{$i} {
-		background-color: unquote($i);
-	}
-}
+@import './../theme/theme.scss';

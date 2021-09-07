@@ -6,7 +6,7 @@
 // @parameter {$i: number of columns}
 @mixin grid-columns-width($i) {
 	$sn: #{$i - 1};
-	$columns-width: calc(#{100 / $i}% - var(--grid-gap) * #{$sn}/#{$i});
+	$columns-width: calc(#{100 / $i}% - var(--grid-gap) * #{$sn / $i});
 	@if ($i == 1) {
 		grid-template-columns: 100%;
 	}
@@ -30,6 +30,9 @@
 		grid-template-columns: 100%;
 		column-gap: var(--grid-gap);
 		width: 100%;
+		&.gap {
+			row-gap: var(--grid-gap);
+		}
 	}
 }
 
@@ -56,27 +59,3 @@
 		}
 	}
 }
-
-.l-center {
-	display: flex;
-	align-content: center;
-	align-items: center;
-}
-.l-main-center {
-	flex-direction: column;
-	justify-content: center;
-}
-
-.l-to-right {
-	margin-right: auto;
-}
-
-.l-to-left {
-	margin-left: auto;
-}
-
-.pd {
-	padding: 1rem;
-}
-
-@include compile-grid($breakpoints, 12);
