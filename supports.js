@@ -10,6 +10,3 @@ const mobile = [
 	'last 3 ChromeAndroid major versions',
 	'last 2 iOS major versions',
 ]
-
-const was_grid = require('was-grid')
-console.log(was_grid)
